@@ -484,11 +484,6 @@ a {
 .gallery {
     width:40%;
 }
-.clickable-img {
-            cursor: pointer;
-            max-width: 300px;
-            transition: transform 0.3s;
-        }
 .confirm {
     width: 50%;
     background: rgba(255, 255, 255, 0.75);
@@ -957,7 +952,7 @@ a {
 <section class="gallery-confirm gap-5 p-5 d-flex justify-content-evenly flex-wrap h-auto">
     <div class="gallery overflow-hidden">
         <h1 class="photo mb-3">GALLERY PHOTOS</h1>
-        <div onclick="openFullscreen(this)" class="container rounded-5 clickable-img">
+        <div class="container rounded-5">
         </div>
     </div>
     <div class="confirm mt-5 p-5 mx-auto rounded-3">
@@ -1155,17 +1150,6 @@ a {
         const url = "https://wa.me/" + nomorWhatsApp + "?text=" + encodeURIComponent(pesan);
         window.open(url, "_blank");
     });
-    function openFullscreen(img) {
-        const overlay = document.querySelector('.fullscreen-overlay');
-        const fullscreenImg = overlay.querySelector('.fullscreen-img');
-        
-        fullscreenImg.src = img.src;
-        overlay.style.display = 'flex';
-    }
-
-    function closeFullscreen() {
-        document.querySelector('.fullscreen-overlay').style.display = 'none';
-    }
 </script>
 </body>
 </html>
