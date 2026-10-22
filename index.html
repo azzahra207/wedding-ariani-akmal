@@ -1044,15 +1044,14 @@ a {
     const MAPS_AKAD = "https://maps.google.com/?q=Jakarta+Selatan";
     const MAPS_RESEPSI = "https://maps.google.com/?q=Jakarta+Selatan";
 
-    (
-        function setGuestName(){
-            const params = new URLSearchParams(window.location.search);
-            const to = params.get("to");
-            if(to){
-              document.getElementById("guest-name").textContent = decodeURIComponent(to.replace(/\+/g," "));
-            }
+    (function setGuestName() {
+        const params = new URLSearchParams(window.location.search);
+        const to = params.get("to");
+        
+        if (to) {
+            document.getElementById("guest-name").textContent = to;
         }
-    )();
+    })();
 
     (
         function petals(){  
